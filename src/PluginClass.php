@@ -39,6 +39,14 @@ class PluginClass extends EnumHelper
         return $this->entity;
     }
 
+    public function isEquals(?self $class): bool
+    {
+        if ($class === null) {
+            return false;
+        }
+        return $this->get() === $class->get();
+    }
+
     public static function values(): array
     {
         return [
