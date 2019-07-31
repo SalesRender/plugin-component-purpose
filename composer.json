@@ -1,0 +1,22 @@
+{
+  "name": "leadvertex/plugin-component-purpose",
+  "description": "LeadVertex plugin purpose component",
+  "type": "library",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Timur Kasumov aka XAKEPEHOK",
+      "email": "support@leadvertex.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Leadvertex\\Plugin\\Components\\Purpose\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=7.1.0",
+    "xakepehok/enum-helper": "^0.1.0"
+  }
+}
