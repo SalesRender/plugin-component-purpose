@@ -9,5 +9,6 @@ This packet is internal representation of possible plugin actions and entities, 
 `Leadvertex\Plugin\Components\Purpose\PluginEntity` - ValueObject, that provide possible entities, that plugin can handle. 
 - `PluginEntity::ENTITY_ORDER` mean, that plugin can work with orders
 
-
+## PluginPurpose
+`\Leadvertex\Plugin\Components\Purpose\PluginPurpose` - container for PluginClass & PluginEntity
 
