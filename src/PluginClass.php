@@ -18,7 +18,7 @@ class PluginClass extends EnumHelper
     /**
      * @var string
      */
-    private $entity;
+    private $class;
 
     /**
      * PluginClass constructor.
@@ -28,7 +28,7 @@ class PluginClass extends EnumHelper
     public function __construct(string $entity)
     {
         self::guardValidValue($entity);
-        $this->entity = $entity;
+        $this->class = $entity;
     }
 
     /**
@@ -36,7 +36,7 @@ class PluginClass extends EnumHelper
      */
     public function get(): string
     {
-        return $this->entity;
+        return $this->class;
     }
 
     public function isEquals(?self $class): bool
