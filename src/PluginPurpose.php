@@ -7,7 +7,9 @@
 namespace Leadvertex\Plugin\Components\Purpose;
 
 
-class PluginPurpose
+use JsonSerializable;
+
+class PluginPurpose implements JsonSerializable
 {
 
     /**
@@ -52,4 +54,14 @@ class PluginPurpose
         return $isSameClass && $isSameEntity;
     }
 
+    /**
+     * @inheritDoc
+     */
+    public function jsonSerialize()
+    {
+        return [
+            'entity' => $this->class->get(),
+            'class' => $this->entity->get(),
+        ];
+    }
 }

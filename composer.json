@@ -17,6 +17,7 @@
   },
   "require": {
     "php": ">=7.1.0",
+    "ext-json": "*",
     "xakepehok/enum-helper": "^0.1.0"
   }
 }
