@@ -14,6 +14,8 @@ class PluginClass extends EnumHelper
 {
 
     const CLASS_EXPORTER = 'EXPORTER';
+    const CLASS_HANDLER = 'HANDLER';
+    const CLASS_IMPORTER = 'IMPORTER';
 
     /**
      * @var string
@@ -51,6 +53,8 @@ class PluginClass extends EnumHelper
     {
         return [
             self::CLASS_EXPORTER,
+            self::CLASS_HANDLER,
+            self::CLASS_IMPORTER,
         ];
     }
 }
