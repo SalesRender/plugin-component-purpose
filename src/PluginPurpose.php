@@ -54,14 +54,11 @@ class PluginPurpose implements JsonSerializable
         return $isSameClass && $isSameEntity;
     }
 
-    /**
-     * @inheritDoc
-     */
     public function jsonSerialize()
     {
         return [
-            'entity' => $this->class->get(),
-            'class' => $this->entity->get(),
+            'class' => $this->class->get(),
+            'entity' => $this->entity->get(),
         ];
     }
 }
