@@ -54,7 +54,7 @@ class PluginPurpose implements JsonSerializable
         return $isSameClass && $isSameEntity;
     }
 
-    public function jsonSerialize()
+    public function jsonSerialize(): array
     {
         return [
             'class' => $this->class->get(),
