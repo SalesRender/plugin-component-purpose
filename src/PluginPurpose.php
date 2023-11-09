@@ -4,7 +4,7 @@
  * @author Timur Kasumov aka XAKEPEHOK
  */
 
-namespace Leadvertex\Plugin\Components\Purpose;
+namespace SalesRender\Plugin\Components\Purpose;
 
 
 use JsonSerializable;
