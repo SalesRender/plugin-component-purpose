@@ -12,13 +12,10 @@ use JsonSerializable;
 class PluginPurpose implements JsonSerializable
 {
 
-    /**
-     * @var PluginClass
-     */
+    /** @var PluginClass */
     private $class;
-    /**
-     * @var PluginEntity
-     */
+
+    /** @var PluginEntity */
     private $entity;
 
     public function __construct(PluginClass $class, PluginEntity $entity)

@@ -1,25 +1,19 @@
 <?php
 /**
- * Datetime: 26.06.2019 18:37
- * @author Timur Kasumov aka XAKEPEHOK
+ * Created for plugin-component-purpose
+ * Date: 28.12.2023
+ * @author: Timur Kasumov (XAKEPEHOK)
  */
 
 namespace SalesRender\Plugin\Components\Purpose;
 
-
 use XAKEPEHOK\EnumHelper\EnumHelper;
 use XAKEPEHOK\EnumHelper\Exception\OutOfEnumException;
 
-class PluginClass extends EnumHelper
+abstract class PluginClass extends EnumHelper
 {
 
-    const CLASS_EXPORTER = 'EXPORTER';
-    const CLASS_HANDLER = 'HANDLER';
-    const CLASS_IMPORTER = 'IMPORTER';
-
-    /**
-     * @var string
-     */
+    /** @var string */
     private $class;
 
     /**
@@ -49,12 +43,4 @@ class PluginClass extends EnumHelper
         return $this->get() === $class->get();
     }
 
-    public static function values(): array
-    {
-        return [
-            self::CLASS_EXPORTER,
-            self::CLASS_HANDLER,
-            self::CLASS_IMPORTER,
-        ];
-    }
 }

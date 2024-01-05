@@ -13,6 +13,7 @@ use XAKEPEHOK\EnumHelper\Exception\OutOfEnumException;
 class PluginEntity extends EnumHelper
 {
 
+    const ENTITY_UNSPECIFIED = 'UNSPECIFIED';
     const ENTITY_ORDER = 'ORDER';
 
     /**
@@ -50,6 +51,7 @@ class PluginEntity extends EnumHelper
     public static function values(): array
     {
         return [
+            self::ENTITY_UNSPECIFIED,
             self::ENTITY_ORDER,
         ];
     }
