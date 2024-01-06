@@ -16,8 +16,17 @@
     }
   },
   "require": {
-    "php": ">=7.1.0",
+    "php": ">=7.4.0",
     "ext-json": "*",
     "xakepehok/enum-helper": "^0.1.0"
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "SalesRender\\Plugin\\Components\\Purpose\\": "tests/"
+    }
+  },
+  "require-dev": {
+    "ext-dom": "*",
+    "phpunit/phpunit": "^8.2"
   }
 }

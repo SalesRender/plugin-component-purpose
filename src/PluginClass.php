@@ -7,6 +7,7 @@
 
 namespace SalesRender\Plugin\Components\Purpose;
 
+use OutOfBoundsException;
 use XAKEPEHOK\EnumHelper\EnumHelper;
 use XAKEPEHOK\EnumHelper\Exception\OutOfEnumException;
 
@@ -41,6 +42,24 @@ abstract class PluginClass extends EnumHelper
             return false;
         }
         return $this->get() === $class->get();
+    }
+
+    public static function factory(string $value): PluginClass
+    {
+        /** @var PluginClass[] $classes */
+        $classes = [
+            MacrosPluginClass::class,
+            LogisticPluginClass::class,
+            PbxPluginClass::class,
+        ];
+
+        foreach ($classes as $class) {
+            if (in_array($value, $class::values())) {
+                return new $class($value);
+            }
+        }
+
+        throw new OutOfBoundsException("Can't create purpose plugin class by passed value {$value}");
     }
 
 }

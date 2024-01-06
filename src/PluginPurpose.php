@@ -8,6 +8,7 @@ namespace SalesRender\Plugin\Components\Purpose;
 
 
 use JsonSerializable;
+use XAKEPEHOK\EnumHelper\Exception\OutOfEnumException;
 
 class PluginPurpose implements JsonSerializable
 {
@@ -57,5 +58,16 @@ class PluginPurpose implements JsonSerializable
             'class' => $this->class->get(),
             'entity' => $this->entity->get(),
         ];
+    }
+
+    /**
+     * @throws OutOfEnumException
+     */
+    public static function factory(array $data): self
+    {
+        return new PluginPurpose(
+            PluginClass::factory($data['class'] ?? ''),
+            new PluginEntity($data['entity'] ?? '')
+        );
     }
 }
