@@ -14,7 +14,7 @@ abstract class PluginClass extends EnumHelper
 {
 
     /** @var string */
-    private $class;
+    protected $class;
 
     /**
      * PluginClass constructor.
