@@ -51,6 +51,7 @@ abstract class PluginClass extends EnumHelper
             MacrosPluginClass::class,
             LogisticPluginClass::class,
             PbxPluginClass::class,
+            ResalePluginClass::class,
         ];
 
         foreach ($classes as $class) {
