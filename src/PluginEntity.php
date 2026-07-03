@@ -13,17 +13,13 @@ use XAKEPEHOK\EnumHelper\Exception\OutOfEnumException;
 class PluginEntity extends EnumHelper
 {
 
-    const ENTITY_UNSPECIFIED = 'UNSPECIFIED';
-    const ENTITY_ORDER = 'ORDER';
+    const string ENTITY_UNSPECIFIED = 'UNSPECIFIED';
+    const string ENTITY_ORDER = 'ORDER';
 
-    /**
-     * @var string
-     */
-    private $entity;
+    private string $entity;
 
     /**
      * PluginEntity constructor.
-     * @param string $entity
      * @throws OutOfEnumException
      */
     public function __construct(string $entity)
@@ -32,9 +28,6 @@ class PluginEntity extends EnumHelper
         $this->entity = $entity;
     }
 
-    /**
-     * @return string
-     */
     public function get(): string
     {
         return $this->entity;

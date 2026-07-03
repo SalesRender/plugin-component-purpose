@@ -10,8 +10,8 @@ namespace SalesRender\Plugin\Components\Purpose;
 class PbxPluginClass extends PluginClass
 {
 
-    const CLASS_SIP = 'SIP';
-    const CLASS_WEBHOOK = 'WEBHOOK';
+    const string CLASS_SIP = 'SIP';
+    const string CLASS_WEBHOOK = 'WEBHOOK';
 
     public static function values(): array
     {

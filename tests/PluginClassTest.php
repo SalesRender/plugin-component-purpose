@@ -8,16 +8,17 @@
 namespace SalesRender\Plugin\Components\Purpose;
 
 use OutOfBoundsException;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
 class PluginClassTest extends TestCase
 {
 
     /**
-     * @dataProvider classesDataProvider
      * @param string|PluginClass $class
      * @return void
      */
+    #[DataProvider('classesDataProvider')]
     public function testFactory(string $class)
     {
         foreach ($class::values() as $value) {
@@ -33,7 +34,7 @@ class PluginClassTest extends TestCase
         PluginClass::factory('qwerty');
     }
 
-    private function classesDataProvider(): array
+    public static function classesDataProvider(): array
     {
         return [
             [MacrosPluginClass::class],

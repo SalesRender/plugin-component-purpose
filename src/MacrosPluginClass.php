@@ -10,9 +10,9 @@ namespace SalesRender\Plugin\Components\Purpose;
 class MacrosPluginClass extends PluginClass
 {
 
-    const CLASS_EXPORTER = 'EXPORTER';
-    const CLASS_HANDLER = 'HANDLER';
-    const CLASS_IMPORTER = 'IMPORTER';
+    const string CLASS_EXPORTER = 'EXPORTER';
+    const string CLASS_HANDLER = 'HANDLER';
+    const string CLASS_IMPORTER = 'IMPORTER';
 
     public static function values(): array
     {

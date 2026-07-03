@@ -10,8 +10,8 @@ namespace SalesRender\Plugin\Components\Purpose;
 class LogisticPluginClass extends PluginClass
 {
 
-    const CLASS_DELIVERY = 'DELIVERY';
-    const CLASS_FULFILLMENT = 'FULFILLMENT';
+    const string CLASS_DELIVERY = 'DELIVERY';
+    const string CLASS_FULFILLMENT = 'FULFILLMENT';
 
     public static function values(): array
     {

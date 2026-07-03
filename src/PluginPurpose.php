@@ -13,11 +13,9 @@ use XAKEPEHOK\EnumHelper\Exception\OutOfEnumException;
 class PluginPurpose implements JsonSerializable
 {
 
-    /** @var PluginClass */
-    private $class;
+    private PluginClass $class;
 
-    /** @var PluginEntity */
-    private $entity;
+    private PluginEntity $entity;
 
     public function __construct(PluginClass $class, PluginEntity $entity)
     {
@@ -25,17 +23,11 @@ class PluginPurpose implements JsonSerializable
         $this->entity = $entity;
     }
 
-    /**
-     * @return PluginClass
-     */
     public function getClass(): PluginClass
     {
         return $this->class;
     }
 
-    /**
-     * @return PluginEntity
-     */
     public function getEntity(): PluginEntity
     {
         return $this->entity;

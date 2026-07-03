@@ -10,7 +10,7 @@ namespace SalesRender\Plugin\Components\Purpose;
 class ResalePluginClass extends PluginClass
 {
 
-    const CLASS_RESALE = 'RESALE';
+    const string CLASS_RESALE = 'RESALE';
 
     public static function values(): array
     {

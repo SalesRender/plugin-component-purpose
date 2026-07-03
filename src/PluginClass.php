@@ -14,12 +14,10 @@ use XAKEPEHOK\EnumHelper\Exception\OutOfEnumException;
 abstract class PluginClass extends EnumHelper
 {
 
-    /** @var string */
-    protected $class;
+    protected string $class;
 
     /**
      * PluginClass constructor.
-     * @param string $entity
      * @throws OutOfEnumException
      */
     public function __construct(string $entity)
@@ -28,9 +26,6 @@ abstract class PluginClass extends EnumHelper
         $this->class = $entity;
     }
 
-    /**
-     * @return string
-     */
     public function get(): string
     {
         return $this->class;
